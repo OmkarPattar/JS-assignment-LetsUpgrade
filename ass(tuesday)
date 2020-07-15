@@ -1,0 +1,85 @@
+QUETION 1...:-Explore and explain the various methods in console function
+Explain them
+
+1--> console.log(): used to print the output to the console. We can put any type inside the log() such as string, array, object, boolean etc.
+eg:- (1)  console.log('abc');    (2)  console.log([1, 2, 3, 4]);  
+
+2--> console.error(): Used to log error message to the console. Useful in testingor debuggung the code. 
+eg:- console.error('this is an error');     
+
+3-->console.warn(): Used to log warning message to the console. By default the warning message will be highlighted with yellow color.
+eg:- console.warn('this is an warning');  
+
+4-->console.clear(): Used to clear the console. 
+eg:- console.clear(); 
+
+5-->console.time() and console.timeEnd(): if we want to know the amount of time spend by a block or a function, we can make use of the time() and timeEnd() methods provided by the javascript console object.  the code inside can be anything such as function, object, simpleconsole
+eg:-console.time('abc'); 
+      let fun1 =  function()
+      {
+         console.log('this is function one')' 
+      } 
+       let fun2 = function()
+      {
+        console.log('this is function two'); 
+      } 
+          fun();
+          fun2();  
+          console.timeEnd('abc'); 
+          
+6-->console.table(): This method allows us to generate a table inside a console. The input object will be shown in table format.
+eg:-console.table({'name':'omkar, 'age':20});
+
+7-->console.count(): It is used to count the number that the function hit by this counting method.
+eg:-for(let k=0;k<10;k++)
+    {
+      console.count(k); 
+    } 
+8-->console.group() and console.groupEnd():   group() and groupEnd() methods of the console object allows us to group contents in a separate block, which will be indented.
+eg:-console.group('simple console'); 
+    console.warn('this is an warning!'); 
+    console.error('this is an error'); 
+    console.log('omkar pattar'); 
+    console.groupEnd('simple console'); 
+    console.log('new section'); 
+
+       QUETION 2...:-Write the difference between var, let and const with code examples:-
+       
+       var:- (1)var means variable that are available for use.
+             (2)var declarations are globally scoped.The scope is global when a var variable is declared outside a function.
+             (3)var is function scoped when it is declared within a function.
+             (4)eg:-    var a = "welcome to JS";
+                  function newFunction() 
+                  {
+                      var hello = "hello";
+                  }
+                  
+      let:-  (1) let is used for variable declaration.
+             (2) let declaration are block scoped i.e within the block
+             (3) variable declared in a block with let  is only available for use within that block
+             (4) eg:-let a = "welcome to JS";
+                      let times = 4;
+              if (times > 3)
+              {
+                     let hello = "say Hello instead";
+                     console.log(hello);
+              }
+               console.log(hello)
+               
+      const:-  (1)  Variables declared with the const maintain constant values.
+               (2)  const declarations can only be accessed within the block they were declared.
+               (3)  const cannot be updated or re-declared.
+               (4)  eg:-const hello = "say Hi";
+                     hello = "say Hello instead";
+                     
+                     
+    QUETION 3...:- Write a brief intro on available data types in Javascript.
+    
+    1-->Boolean type:  Boolean represents a logical entity and can have two values: true and false.
+    2--> Null type:  The Null type has exactly one value: null
+    3--> Undefined type:  A variable that has not been assigned a value has the value undefined               
+    4--> number type:  a variable is used to hold numberic value.
+    5-->  igInt type: The BigInt type is a numeric primitive in JavaScript that can represent integers with arbitrary precision
+    6--> string type: String type is used to represent textual data
+    7--> Symbol type: A Symbol is a unique and immutable primitive value and may be used as the key of an Object property 
+    
