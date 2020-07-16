@@ -1,0 +1,192 @@
+   QUESTION 1 ..:-Write a JS code which takes input from the user and logs it in the console.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Console</title>
+</head>
+<body>
+    <h2>This Takes A User Name To Enter The Console..</h2>>
+<script>
+    var input =prompt("Enter your name");
+    console.log(input);
+    </script>
+</body>
+</html>
+
+
+QUESTION 2...:-Explain with examples the remaining methods of String and Array
+
+(1) charat(): Returns the character at the specific index.
+    eg:- var str = "HELLO WORLD";
+    var res = str.charAt(0);
+(2) charCodeaAt(): Return the Unicode of the first character in a string
+   eg:- var str = "HELLO WORLD";
+        var n = str.charCodeAt(0);  
+ (3) concat(): var str1 = "Hello ";
+     eg:-var str2 = "world!";
+      var res = str1.concat(str2);
+(4) fromCharCode() :- Convert a Unicode number into a character
+  eg:-var res = String.fromCharCode(65);
+(5)includes():- Check if a string includes "world"
+  eg:- var str = "Hello world, welcome to the universe.";
+    var n = str.includes("world");
+(6) indexOf():- Search a string for "welcome":
+      eg:-var str = "Hello world, welcome to the universe.";
+var n = str.indexOf("welcome");
+(7)lastIndexOf() :- Search a string for the last occurrence of "planet":
+  eg:- var str = "Hello planet earth, you are a great planet.";
+var n = str.lastIndexOf("planet");
+(8)   localeCompare() :- Compare two strings in the current locale:
+  eg:- var str1 = "ab";
+var str2 = "cd";
+var n = str1.localeCompare(str2);
+(9)match() :-  The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.
+eg:- var str = "The rain in SPAIN stays mainly in the plain";
+var res = str.match(/ain/g);
+(10)repeat():-the repeat() method returns a new string with a specified number of copies of the string it was called on
+eg:-  var str = "Hello world!";
+str.repeat(2);
+(11)replace():-  The replace() method searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced.
+    eg:-  var str = "Visit Microsoft!";
+var res = str.replace("Microsoft", "W3Schools");
+(12) search():-  the search() method searches a string for a specified value, and returns the position of the match.
+    eg:-var str = "Visit W3Schools!";
+var n = str.search("W3Schools");
+(13)slice():-  The slice() method extracts parts of a string and returns the extracted parts in a new string.
+eg:-  var str = "Hello world!";
+var res = str.slice(0, 5);
+
+(14)split():-  the split() method is used to split a string into an array of substrings, and returns the new array.
+  eg:-  var str = "How are you doing today?";
+var res = str.split(" ");
+(15)startwith():-  The startsWith() method determines whether a string begins with the characters of a specified string.
+  eg:-  var str = "Hello world, welcome to the universe.";
+var n = str.startsWith("Hello");
+(16)substr():-  The substr() method extracts parts of a string, beginning at the character at the specified position, and returns the specified number of characters.
+eg:-  var str = "Hello world!";
+var res = str.substr(1, 4);
+(17)substring():-  The substring() method extracts the characters from a string, between two specified indices, and returns the new sub string.
+  eg:-var str = "Hello world!";
+var res = str.substring(1, 4);
+
+(18) toLowerCase():-   The toLowerCase() method converts a string to lowercase letters.
+    eg:-  var str = "Hello World!";
+var res = str.toLowerCase();
+(19) trim():-    The trim() method removes whitespace from both sides of a string.
+   eg:-   var str = "       Hello World!        ";
+alert(str.trim());
+(20)valueOf():-  The valueOf() method returns the primitive value of a String object.
+    eg:-  var str = "Hello World!";
+var res = str.valueOf();
+
+          ARRAY:----
+(1)concat():-- The concat() method is used to join two or more arrays.
+      eg:--var hege = ["Cecilie", "Lone"];
+var stale = ["Emil", "Tobias", "Linus"];
+var children = hege.concat(stale);
+(2)copyWithin():-  The copyWithin() method copies array elements to another position in the array, overwriting the existing values.
+    eg:-  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.copyWithin(2, 0);
+(3)entries():-  The entries() method returns an Array Iterator object with key/value pairs.
+    eg:-  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var f = fruits.entries();
+
+for (x of f) {
+  document.getElementById("demo").innerHTML += x;
+}
+(4)every():-   The every() method checks if all elements in an array pass a test (provided as a function).
+    eg:-  var ages = [32, 33, 16, 40];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.every(checkAdult);
+}
+(5)fill():-  The fill() method fills the specified elements in an array with a static value.
+      eg:-  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.fill("Kiwi");
+(6)filter():-  The filter() method creates an array filled with all array elements that pass a test
+    eg:-  var ages = [32, 33, 16, 40];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+}
+(7)find():-  The find() method returns the value of the first element in an array that pass a test
+    eg:-  var ages = [3, 10, 18, 20];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.find(checkAdult);
+}
+(8)findIndex():-  The findIndex() method returns the index of the first element in an array that pass a test
+    eg:-  var ages = [3, 10, 18, 20];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.findIndex(checkAdult);
+}
+(9)forEach():-  The forEach() method calls a function once for each element in an array, in order.
+    eg:-  var fruits = ["apple", "orange", "cherry"];
+fruits.forEach(myFunction);
+
+function myFunction(item, index) {
+  document.getElementById("demo").innerHTML += index + ":" + item + "<br>";
+}
+(10)from():-  The Array.from() method returns an Array object from any object with a length property or an iterable object.
+      eg:- var myArr = Array.from("ABCDEFG");
+(11)includes():-  The includes() method determines whether an array contains a specified element.
+      eg:-  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var n = fruits.includes("Mango");
+(12)IndexOf():-  The indexOf() method searches the array for the specified item, and returns its position.
+    eg:-  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var a = fruits.indexOf("Apple");
+(13)  isArray():-  The isArray() method determines whether an object is an array.
+      eg:-  function myFunction() {
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  var x = document.getElementById("demo");
+  x.innerHTML = Array.isArray(fruits);
+}
+(14)join():-  The join() method returns the array as a string.
+      eg:-  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var energy = fruits.join();
+(15)keys():-  The keys() method returns an Array Iterator object with the keys of an array.
+    eg:-  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var fk = fruits.keys();
+
+for (x of fk) {
+  document.getElementById("demo").innerHTML += x + "<br>";
+}
+(16)lastIndexOf():-  The lastIndexOf() method searches the array for the specified item, and returns its position.
+      eg:-   var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var a = fruits.lastIndexOf("Apple");
+(17)map():-  The map() method creates a new array with the results of calling a function for every array element.
+      eg:--  var numbers = [4, 9, 16, 25];
+var x = numbers.map(Math.sqrt)
+document.getElementById("demo").innerHTML = x;
+(18)pop():-  The pop() method removes the last element of an array, and returns that element.
+    eg:-   var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+(19)toString():-   The toString() method returns a string with all the array values, separated by commas.
+      eg:-var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var x = fruits.toString();
+(20)unShift();-- The unshift() method adds new items to the beginning of an array, and returns the new length.    
+      eg:-  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon","Pineapple");
+
+
+QUESTION 3  (OPTIONAL QUESTION)...:-
